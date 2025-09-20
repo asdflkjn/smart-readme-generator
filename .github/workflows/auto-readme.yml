@@ -2,7 +2,7 @@ name: 🤖 Auto Generate README
 
 on:
   push:
-    branches: [ master ]  # master 브랜치 사용
+    branches: [ master ]
     paths: 
       - '**.py'
   workflow_dispatch:
@@ -11,10 +11,17 @@ jobs:
   generate-readme:
     runs-on: ubuntu-latest
     
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    
     steps:
     - name: 📥 Checkout repository
       uses: actions/checkout@v4
-      
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: 🐍 Set up Python
       uses: actions/setup-python@v4
       with:
@@ -25,9 +32,15 @@ jobs:
         python src/main.py
         
     - name: 💾 Commit and push if changed
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "README Generator Bot"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add README.md
-        git diff --staged --quiet || git commit -m "🤖 Auto-update README.md"
-        git push
+        if ! git diff --staged --quiet; then
+          git commit -m "🤖 Auto-update README.md"
+          git push
+        else
+          echo "No changes to README.md"
+        fi

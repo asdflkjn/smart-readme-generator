@@ -1,20 +1,22 @@
-# 🐍 Python 프로젝트
+# 📊 데이터 분석 도구
 
-> ⚡ **자동 생성된 README** - 2025년 09월 21일
+> ⚡ **자동 생성된 README** - 2025년 09월 20일
 
 ## 📋 프로젝트 개요
 
-이 프로젝트는 **2개의 Python 파일**로 구성된 프로그램입니다.
+이 프로젝트는 **4개의 Python 파일**로 구성된 프로그램입니다.
 
 ### 🎯 주요 특징
 - ✨ 인사 기능
+- ✨ 데이터 조회
+- ✨ 데이터 저장
 - ✨ 객체 지향 설계
 
 ### 📊 코드 통계
-- **Python 파일**: 2개
+- **Python 파일**: 4개
 - **JavaScript 파일**: 0개
-- **함수**: 10개
-- **클래스**: 2개
+- **함수**: 22개
+- **클래스**: 4개
 
 ## 🚀 빠른 시작
 
@@ -27,28 +29,41 @@ pip install -r requirements.txt
 
 ### 사용법
 ```python
-result = calculate_area()
-result = calculate_volume()
-calculator = Calculator()
-print(calculator.greet())
-testclass = TestClass()
+result = get_current_time()
+result = generate_random_id()
+result = format_file_size()
+colorhelper = ColorHelper()
+print(colorhelper.greet())
 ```
 
 ## 📚 API 문서
 
 ### 📋 함수 목록
+- `get_current_time()` - get_current_time 기능을 수행합니다
+- `generate_random_id()` - generate_random_id 기능을 수행합니다
+- `format_file_size()` - format_file_size 기능을 수행합니다
+- `get_color_code()` - get_color_code 기능을 수행합니다
+- `add_color()` - add_color 기능을 수행합니다
+- `hello_world()` - hello_world 기능을 수행합니다
+- `greet()` - greet 기능을 수행합니다
+- `clean_text_data()` - clean_text_data 기능을 수행합니다
+- `validate_email()` - validate_email 기능을 수행합니다
+- `generate_report()` - generate_report 기능을 수행합니다
+- `load_json_data()` - load_json_data 기능을 수행합니다
+- `filter_data()` - filter_data 기능을 수행합니다
+- `save_processed_data()` - save_processed_data 기능을 수행합니다
 - `calculate_area()` - calculate_area 기능을 수행합니다
 - `calculate_volume()` - calculate_volume 기능을 수행합니다
 - `add()` - add 기능을 수행합니다
 - `subtract()` - subtract 기능을 수행합니다
 - `multiply()` - multiply 기능을 수행합니다
 - `divide()` - divide 기능을 수행합니다
-- `hello_world()` - hello_world 기능을 수행합니다
-- `greet()` - greet 기능을 수행합니다
 
 ### 🏗️ 클래스 목록
-- `Calculator` - Calculator 객체를 정의합니다
+- `ColorHelper` - ColorHelper 객체를 정의합니다
 - `TestClass` - TestClass 객체를 정의합니다
+- `DataProcessor` - DataProcessor 객체를 정의합니다
+- `Calculator` - Calculator 객체를 정의합니다
 
 ## 🛠️ 개발 환경
 
